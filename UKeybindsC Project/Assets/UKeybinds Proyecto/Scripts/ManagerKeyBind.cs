@@ -36,7 +36,15 @@ namespace MoonAntonio
 		/// <summary>
 		/// <para>Key actual guardada</para>
 		/// </summary>
-		private GameObject actualKey;														// Key actual guardada
+		private GameObject actualKey;                                                       // Key actual guardada
+		/// <summary>
+		/// <para>Color del btn en estado normal</para>
+		/// </summary>
+		private Color32 btnColorNormal = new Color32(39,171,249,255);						// Color del btn en estado normal
+		/// <summary>
+		/// <para>Color del btn en estado seleccionado</para>
+		/// </summary>
+		private Color32 btnColorSeleccionado = new Color32(0, 255, 244, 255);				// Color del btn en estado seleccionado
 		#endregion
 
 		#region Inicializadores
@@ -113,8 +121,6 @@ namespace MoonAntonio
 			{
 				Debug.Log("Correr");
 			}
-
-
 		}
 		#endregion
 
@@ -136,6 +142,7 @@ namespace MoonAntonio
 
 					// Actualizamos la UI de la key
 					actualKey.transform.GetChild(0).GetComponent<Text>().text = e.keyCode.ToString();
+					actualKey.GetComponent<Image>().color = btnColorNormal;
 					actualKey = null;
 				}
 			}
@@ -149,7 +156,15 @@ namespace MoonAntonio
 		/// <param name="obj">Objeto</param>
 		public void CambiarKey(GameObject obj)// Cambia la key
 		{
+			// Cambiamos a normal el estado del btn
+			if (actualKey != null)
+			{
+				actualKey.GetComponent<Image>().color = btnColorNormal;
+			}
+
+			// Asignamos la nueva key
 			actualKey = obj;
+			actualKey.GetComponent<Image>().color = btnColorSeleccionado;
 		}
 		#endregion
 	}

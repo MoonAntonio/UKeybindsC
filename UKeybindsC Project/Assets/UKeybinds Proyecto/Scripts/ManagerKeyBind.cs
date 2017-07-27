@@ -41,6 +41,7 @@ namespace MoonAntonio
 		/// </summary>
 		private void Start()// Inicializador de ManagerKeyBind
 		{
+			// Agregar al diccionario las keys
 			keys.Add("arriba", KeyCode.W);
 			keys.Add("abajo", KeyCode.S);
 			keys.Add("derecha", KeyCode.D);
@@ -49,6 +50,16 @@ namespace MoonAntonio
 			keys.Add("defender", KeyCode.Mouse1);
 			keys.Add("saltar", KeyCode.Space);
 			keys.Add("correr", KeyCode.LeftShift);
+
+			// Representar en la UI las keys
+			arriba.text = keys["arriba"].ToString();
+			abajo.text = keys["abajo"].ToString();
+			derecha.text = keys["derecha"].ToString();
+			izquierda.text = keys["izquierda"].ToString();
+			atacar.text = keys["atacar"].ToString();
+			defender.text = keys["defender"].ToString();
+			saltar.text = keys["saltar"].ToString();
+			correr.text = keys["correr"].ToString();
 		}
 		#endregion
 	}

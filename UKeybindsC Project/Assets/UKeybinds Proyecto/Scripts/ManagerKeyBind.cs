@@ -42,13 +42,13 @@ namespace MoonAntonio
 		private void Start()// Inicializador de ManagerKeyBind
 		{
 			keys.Add("arriba", KeyCode.W);
-			keys.Add("abajo", KeyCode.W);
-			keys.Add("derecha", KeyCode.W);
-			keys.Add("izquierda", KeyCode.W);
-			keys.Add("atacar", KeyCode.W);
-			keys.Add("defender", KeyCode.W);
-			keys.Add("saltar", KeyCode.W);
-			keys.Add("correr", KeyCode.W);
+			keys.Add("abajo", KeyCode.S);
+			keys.Add("derecha", KeyCode.D);
+			keys.Add("izquierda", KeyCode.A);
+			keys.Add("atacar", KeyCode.Mouse0);
+			keys.Add("defender", KeyCode.Mouse1);
+			keys.Add("saltar", KeyCode.Space);
+			keys.Add("correr", KeyCode.LeftShift);
 		}
 		#endregion
 	}

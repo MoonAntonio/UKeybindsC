@@ -54,14 +54,14 @@ namespace MoonAntonio
 		private void Start()// Inicializador de ManagerKeyBind
 		{
 			// Agregar al diccionario las keys
-			keys.Add("arriba", KeyCode.W);
-			keys.Add("abajo", KeyCode.S);
-			keys.Add("derecha", KeyCode.D);
-			keys.Add("izquierda", KeyCode.A);
-			keys.Add("atacar", KeyCode.Mouse0);
-			keys.Add("defender", KeyCode.Mouse1);
-			keys.Add("saltar", KeyCode.Space);
-			keys.Add("correr", KeyCode.LeftShift);
+			keys.Add("arriba", (KeyCode)System.Enum.Parse(typeof(KeyCode),PlayerPrefs.GetString("arriba","W")));
+			keys.Add("abajo", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("abajo", "S")));
+			keys.Add("derecha", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("derecha", "D")));
+			keys.Add("izquierda", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("izquierda", "A")));
+			keys.Add("atacar", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("atacar", "Mouse0")));
+			keys.Add("defender", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("defender", "Mouse1")));
+			keys.Add("saltar", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("saltar", "Space")));
+			keys.Add("correr", (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("correr", "LeftShift")));
 
 			// Representar en la UI las keys
 			arriba.text = keys["arriba"].ToString();
@@ -165,6 +165,19 @@ namespace MoonAntonio
 			// Asignamos la nueva key
 			actualKey = obj;
 			actualKey.GetComponent<Image>().color = btnColorSeleccionado;
+		}
+
+		/// <summary>
+		/// <para>Guarda las keys</para>
+		/// </summary>
+		public void Guardar()// Guarda las keys
+		{
+			foreach (var key in keys)
+			{
+				PlayerPrefs.SetString(key.Key, key.Value.ToString());
+			}
+
+			PlayerPrefs.Save();
 		}
 		#endregion
 	}

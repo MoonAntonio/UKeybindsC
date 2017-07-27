@@ -24,7 +24,7 @@ namespace MoonAntonio
 		/// <summary>
 		/// <para>Coleccion de teclas</para>
 		/// </summary>
-		private Dictionary<string, int> bind = new Dictionary<string, int>();		// Coleccion de teclas
+		private Dictionary<string, KeyCode> keys = new Dictionary<string, KeyCode>();		// Coleccion de teclas
 		#endregion
 
 		#region Inicializadores
@@ -33,11 +33,7 @@ namespace MoonAntonio
 		/// </summary>
 		private void Start()// Inicializador de ManagerKeyBind
 		{
-			bind.Add("Up", 10);
-			bind.Add("Down", 2);
 
-			Debug.Log(bind["Animales"]);
-			Debug.Log(bind["Coches"]);
 		}
 		#endregion
 	}

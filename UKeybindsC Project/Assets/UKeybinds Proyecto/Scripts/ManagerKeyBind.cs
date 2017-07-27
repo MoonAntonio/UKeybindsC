@@ -9,6 +9,7 @@
 
 #region Librerias
 using UnityEngine;
+using UnityEngine.UI;
 using System.Collections.Generic;
 #endregion
 
@@ -20,6 +21,13 @@ namespace MoonAntonio
 	[AddComponentMenu("Moon Antonio/ManagerKeyBind")]
 	public class ManagerKeyBind : MonoBehaviour 
 	{
+		#region Variables Publicas
+		/// <summary>
+		/// <para>Texto de keys</para>
+		/// </summary>
+		public Text arriba, abajo, derecha, izquierda, atacar, defender, saltar, correr;	// Texto de keys
+		#endregion
+
 		#region Variables Privadas
 		/// <summary>
 		/// <para>Coleccion de teclas</para>
@@ -33,7 +41,14 @@ namespace MoonAntonio
 		/// </summary>
 		private void Start()// Inicializador de ManagerKeyBind
 		{
-
+			keys.Add("arriba", KeyCode.W);
+			keys.Add("abajo", KeyCode.W);
+			keys.Add("derecha", KeyCode.W);
+			keys.Add("izquierda", KeyCode.W);
+			keys.Add("atacar", KeyCode.W);
+			keys.Add("defender", KeyCode.W);
+			keys.Add("saltar", KeyCode.W);
+			keys.Add("correr", KeyCode.W);
 		}
 		#endregion
 	}

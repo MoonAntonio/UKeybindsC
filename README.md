@@ -17,3 +17,4 @@ Enlace de teclado y controles en Unity3D
   - [x] Teclado y raton
   - [ ] Controladores
  - [x] UI
+ - [x] Guardar nueva config

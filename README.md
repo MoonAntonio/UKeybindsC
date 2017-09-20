@@ -3,6 +3,8 @@
 [![Trello](https://img.shields.io/badge/Trello-OFF-red.svg)](https://github.com/MoonAntonio/UKeybindsC)
 [![Slack Status](https://moonantonio.herokuapp.com/badge.svg)](https://moonantonio.herokuapp.com/)
 [![GitHub license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://raw.githubusercontent.com/MoonAntonio/UKeybindsC/master/LICENSE)
+[![GitHub forks](https://img.shields.io/github/forks/MoonAntonio/UKeybindsC.svg)](https://github.com/MoonAntonio/UKeybindsC/network)
+[![GitHub stars](https://img.shields.io/github/stars/MoonAntonio/UKeybindsC.svg)](https://github.com/MoonAntonio/UKeybindsC/stargazers)
 
 # UKeybindsC
 Enlace de teclado y controles en Unity3D
@@ -15,3 +17,4 @@ Enlace de teclado y controles en Unity3D
   - [x] Teclado y raton
   - [ ] Controladores
  - [x] UI
+ - [x] Guardar nueva config

@@ -18,3 +18,12 @@ Enlace de teclado y controles en Unity3D
   - [ ] Controladores
  - [x] UI
  - [x] Guardar nueva config
+ 
+ ---
+## ¿Como usar?
+
+* Descargar [Unity3D Engine][99]
+* Abrir el proyecto en la escena Alexandria
+* Ejecutar la escena
+
+[99]: https://unity3d.com
